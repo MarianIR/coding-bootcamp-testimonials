@@ -1,7 +1,8 @@
 import { useState } from "react";
 import React from "react";
 import testimonialData from "./data";
-
+import prevArrow from "/src/images/icon-prev.svg";
+import nextArrow from "/src/images/icon-next.svg";
 const App = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
 
@@ -34,13 +35,13 @@ const App = () => {
         />
         <div className="arrow-container">
           <img
-            src="/src/images/icon-prev.svg"
+            src={prevArrow}
             alt="This will show you the previous review when you click it!"
             className="prev-arrow"
             onClick={handlePrevClick}
           />
           <img
-            src="/src/images/icon-next.svg"
+            src={nextArrow}
             alt="This will show you the next review when you click it!"
             className="next-arrow"
             onClick={handleNextClick}
